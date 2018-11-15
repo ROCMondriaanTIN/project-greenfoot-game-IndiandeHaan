@@ -14,8 +14,8 @@ public class Hero extends Mover {
     public Hero() {
         super();
         gravity = 9.8;
-        acc = 0.6;
-        drag = 0.5;
+        acc = 0.7;
+        drag = 0.9;
         setImage("p1.png");
     }
 
@@ -33,7 +33,7 @@ public class Hero extends Mover {
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 getWorld().removeObject(this);
-                break;
+                return;
             }
         }
     }
@@ -44,7 +44,7 @@ public class Hero extends Mover {
 
     public void handleInput() {
         if ((Greenfoot.isKeyDown("w")) && (onGround() == true)) {
-            velocityY = -15;
+            velocityY = -17;
         }
 
         if (Greenfoot.isKeyDown("a")) {
