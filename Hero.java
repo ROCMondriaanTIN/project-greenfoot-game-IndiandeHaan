@@ -48,9 +48,9 @@ public class Hero extends Mover {
         }
 
         if (Greenfoot.isKeyDown("a")) {
-            velocityX = -8;
+            velocityX = -7;
         } else if (Greenfoot.isKeyDown("d")) {
-            velocityX = 8;
+            velocityX = 7;
         }
     }
 

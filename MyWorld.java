@@ -57,7 +57,7 @@ public class MyWorld extends World {
         addObject(camera, 300, 850);
         addObject(hero, 200, 850);
         addObject(new Enemy("pokerSad.png"), 1170, 410);
-        addObject(new Enemy("slimeWalk2.png"), 1020, 766);
+        addObject(new Enemy("slimeWalk2.png"), 890, 1009);
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
         // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
