@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.2" tiledversion="1.2.0" name="tileset_level_3" tilewidth="128" tileheight="146" tilecount="245" columns="0">
+<tileset version="1.2" tiledversion="1.2.1" name="tileset_level_3" tilewidth="128" tileheight="146" tilecount="245" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="323">
   <image width="51" height="51" source="../images/blockerBody.png"/>
@@ -719,10 +719,10 @@
   <image width="70" height="70" source="../images/switchRight.png"/>
  </tile>
  <tile id="566">
-  <image width="70" height="70" source="../images/tochLit.png"/>
+  <image width="70" height="70" source="../images/torchLit.png"/>
  </tile>
  <tile id="567">
-  <image width="70" height="70" source="../images/tochLit2.png"/>
+  <image width="70" height="70" source="../images/torchLit2.png"/>
  </tile>
  <tile id="568">
   <image width="70" height="70" source="../images/torch.png"/>

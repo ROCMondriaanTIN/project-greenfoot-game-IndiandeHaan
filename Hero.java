@@ -30,9 +30,17 @@ public class Hero extends Mover {
         }
         applyVelocity();
 
-        for (Actor enemy : getIntersectingObjects(Enemy.class)) {
+        for (Actor enemy : getIntersectingObjects(Enemy.class )) {
             if (enemy != null) {
-                getWorld().removeObject(this);
+                getWorld(); 
+                Greenfoot.setWorld(new GameOverScreen());
+                return;
+            }
+        }
+        for (Actor enemy : getIntersectingObjects(Spikes.class )) {
+            if (enemy != null) {
+                getWorld(); 
+                Greenfoot.setWorld(new GameOverScreen());
                 return;
             }
         }
