@@ -2,6 +2,7 @@
      *
      * @author R. Springer
      */
+<<<<<<< HEAD
     public class TileFactory {
     
         /**
@@ -10,8 +11,12 @@
          * @param mapIcon number
          * @return Tile tile object
          */
-    public Tile createTile(int mapIcon) {
+        public static Tile createTile(int mapIcon) {
             Tile tile;
+=======
+    public Tile createTile(int mapIcon) {
+        Tile tile;
+>>>>>>> 4372fff5ea53a9c16ee13c8083969eac7aeee2f9
         switch (mapIcon) {
             case 328:
                 tile = new Tile("box.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);

@@ -1,0 +1,77 @@
+
+import greenfoot.*;
+
+/**
+ *
+ * @author R. Springer
+ */
+public class Hero extends Mover {
+
+    private final double gravity;
+    private final double acc;
+    private final double drag;
+
+    public Hero() {
+        super();
+        gravity = 9.8;
+        acc = 0.7;
+        drag = 0.9;
+        setImage("p1.png");
+    }
+
+    @Override
+    public void act() {
+        handleInput();
+        
+        velocityX *= drag;
+        velocityY += acc;
+        if (velocityY > gravity) {
+            velocityY = gravity;
+        }
+        applyVelocity();
+
+        for (Actor enemy : getIntersectingObjects(Enemy.class )) {
+            if (enemy != null) {
+                getWorld(); 
+                Greenfoot.setWorld(new GameOverScreen());
+                return;
+            }
+        }
+        for (Actor enemy : getIntersectingObjects(Spikes.class )) {
+            if (enemy != null) {
+                getWorld(); 
+                Greenfoot.setWorld(new GameOverScreen());
+                return;
+            }
+        }
+    }
+    boolean onGround(){
+        Actor under = getOneObjectAtOffset(0, getImage().getHeight()/2, Tile.class);
+        return under != null;
+    }
+
+    public void handleInput() {
+<<<<<<< HEAD
+        if ((Greenfoot.isKeyDown("w")) && (onGround() == true)) {
+            velocityY = -17;
+=======
+        if (Greenfoot.isKeyDown("w")) {
+            velocityY = -20;
+>>>>>>> 4372fff5ea53a9c16ee13c8083969eac7aeee2f9
+        }
+
+        if (Greenfoot.isKeyDown("a")) {
+            velocityX = -7;
+        } else if (Greenfoot.isKeyDown("d")) {
+            velocityX = 7;
+        }
+    }
+
+    public int getWidth() {
+        return getImage().getWidth();
+    }
+
+    public int getHeight() {
+        return getImage().getHeight();
+    }
+}
